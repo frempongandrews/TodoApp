@@ -67,7 +67,8 @@ body, input{
 .container{
     margin-left: 10px;
     width: 350px;
-    border: 2px solid black;
+    border: 1px solid black;
+    height: 500px;
     overflow-y: auto;
 }
 
@@ -136,13 +137,15 @@ header button svg .fill{
 }
 
 .todo{
-    padding: 15px;
+    padding: 5px 15px;
 }
 
 .todo li{
     background-color: red;
     position: relative;
     padding: 15px;
+    margin-top: 8px;
+    border-radius: 5px;
 }
 
 .remove{
