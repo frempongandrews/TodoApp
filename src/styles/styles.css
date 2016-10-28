@@ -54,8 +54,12 @@ table {
 */
 
 body{
-    background-color: #edf0f1;
+    background-color: #888888;
     box-sizing: border-box;
+}
+
+.noFill{
+    fill: none;
 }
 
 body, input{
@@ -65,10 +69,11 @@ body, input{
 }
 
 .container{
+    background-color: #edf0f1;
     margin-left: 10px;
     width: 350px;
-    border: 1px solid black;
-    height: 500px;
+    border: 1px solid #999999;
+    height: 800px;
     overflow-y: auto;
 }
 
@@ -136,24 +141,118 @@ header button svg .fill{
     fill: #27b99a;
 }
 
+/*header button:hover {*/
+    /*background-color: #27b99a;*/
+/*}*/
+
+/*header button:hover svg .fill{*/
+    /*fill: #ffffff;*/
+/*}*/
+
 .todo{
     padding: 5px 15px;
 }
 
-.todo li{
-    background-color: red;
+.list-item-container{
+    background-color: #ffffff;
     position: relative;
-    padding: 15px;
+    padding: 15px 80px 15px 15px;
     margin-top: 8px;
     border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #444;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+}
+
+.list-item-container> p{
+    display: inline-block;
+    width: 70%;
 }
 
 .remove{
     position: absolute;
-    right: 85px;
+    display: inline-block;
+    right: 35px;
+    margin-right: 10px;
+
 }
 
-.completed{
+.remove:after{
+    content: "";
+    border: 1px solid #e9e9e9;
+    position: relative;
+    bottom: 20px;
+    left: 30px;
+
+}
+
+.complete{
+    display: inline-block;
     position: absolute;
     right: 5px;
+    border: 1px solid #27b99a;
+    border-radius: 50%;
+    transition: background-color 0.4s ease-in-out;
+
+}
+
+
+
+
+
+
+
+
+
+
+.remove svg{
+    width: 22px;
+    height: 22px;
+    position: relative;
+}
+
+.complete svg{
+    width: 22px;
+    height: 22px;
+    position: relative;
+}
+
+
+.remove svg .fill{
+    fill: #c0cecb;
+    transition: fill 0.4s ease-in-out;
+}
+
+.remove:hover svg .fill{
+    fill: #e85656;
+}
+
+.remove:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
+.complete svg .fill{
+    fill: #27b99a;
+    transition: fill 0.4s ease-in-out;
+}
+
+.complete:hover svg .fill{
+    fill: #27b99a;
+}
+
+.complete:hover{
+    cursor: pointer;
+    background-color: #27b99a;
+}
+
+.complete:hover svg .fill{
+    fill: #ffffff;
+
 }
