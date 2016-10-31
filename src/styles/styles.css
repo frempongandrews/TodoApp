@@ -212,6 +212,8 @@ header button svg .fill{
     width: 22px;
     height: 22px;
     position: relative;
+    display: block;
+    z-index: 200;
 }
 
 .complete svg{
@@ -228,15 +230,15 @@ header button svg .fill{
 
 .remove-icon:hover svg .fill{
     fill: #e85656;
+
+    /*(javascript) to not get it as target when clicked*/
+    pointer-events: none;
+
 }
 
 .remove-icon:hover{
     cursor: pointer;
 }
-
-
-
-
 
 
 .complete svg .fill{
