@@ -15,7 +15,8 @@ function removeItem () {
     var item = this.parentNode;
     console.log(item);
     var parent = item.parentNode;
-    console.log(parent.removeChild(item));
+
+    parent.removeChild(item);
     //console.log(this.parentNode.parentNode);
 }
 
@@ -43,7 +44,8 @@ function completeItem () {
         //it is a completed item
         item.classList.remove("completed");
         parent.removeChild(item);
-        todoList.insertBefore(item, todoList.childNodes[0]);
+        todoList.insertBefore(item, todoList.childNodes[0])
+
 
     }
 
@@ -70,6 +72,11 @@ function addItemTodo(text) {
 
     listItem.appendChild(remove);
     listItem.appendChild(complete);
+
+    // for transition
+    listItem.classList.add("newItem");
+
+
     list.insertBefore(listItem, list.childNodes[0]);
 
     //removing items

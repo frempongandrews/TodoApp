@@ -293,3 +293,46 @@ header button svg .fill{
 .completed > .complete {
     background-color: #27b99a;
 }
+
+
+/*
+  ==========================================================
+  Transitions
+  ==========================================================
+*/
+
+/* adding items*/
+
+.newItem{
+    animation: addingItem 0.5s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes addingItem {
+
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+
+}
+
+/* removing items*/
+
+.removeItem{
+    animation: removingItem 0.5s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes removingItem {
+
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    }
+
+}
