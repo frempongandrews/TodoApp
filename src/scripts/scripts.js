@@ -13,15 +13,22 @@ document.getElementById("add").addEventListener("click", function () {
 //removing items
 function removeItem () {
     var item = this.parentNode;
-    console.log(item);
     var parent = item.parentNode;
+    item.classList.remove("newItem");
+    item.classList.add("removingItem");
+    console.log(item);
+    //for transition
+    //removeChild does not allow transition so
+    //let it run slightly later
+    setTimeout(function () {
+        parent.removeChild(item);
+    }, 550);
 
-    parent.removeChild(item);
     //console.log(this.parentNode.parentNode);
 }
 
 
-//removing items
+
 function completeItem () {
     var item = this.parentNode;
     //console.log(item);
