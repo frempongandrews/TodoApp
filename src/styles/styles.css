@@ -259,3 +259,37 @@ header button svg .fill{
     fill: #ffffff;
 }
 
+#completed-list{
+    margin-top: 50px;
+}
+
+#completed-list:not(:empty):before{
+    content: "";
+    width: 200px;
+    border: 1px solid #e0e0e0;
+    display: inline-block;
+    position: relative;
+    left: 60px;
+}
+
+#completed-list>li:first-child{
+    margin-top: 20px;
+}
+
+#completed-list>li{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+/* Completed items*/
+
+.completed > .complete svg .fill{
+    fill: #ffffff;
+}
+
+.completed > .complete {
+    background-color: #27b99a;
+}
