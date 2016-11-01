@@ -37,6 +37,10 @@ function completeItem () {
         //it's a todo item to be completed
         item.classList.add("completed");
         parent.removeChild(item);
+
+        //for transition
+        item.classList.add("newItem");
+
         completedList.insertBefore(item, completedList.childNodes[0]);
 
 
@@ -44,6 +48,9 @@ function completeItem () {
         //it is a completed item
         item.classList.remove("completed");
         parent.removeChild(item);
+
+        //for transition
+        item.classList.add("newItem");
         todoList.insertBefore(item, todoList.childNodes[0])
 
 
