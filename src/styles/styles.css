@@ -70,11 +70,11 @@ body, input{
 
 .container{
     background-color: #edf0f1;
-    margin-left: 10px;
     width: 350px;
     border: 1px solid #999999;
     height: 800px;
     overflow-y: auto;
+    margin: 80px auto;
 }
 
 header{
